@@ -1,0 +1,59 @@
+.fotoStyle {
+    position: absolute;
+    margin-left: 15%;
+
+    width: 445px;   /* например, ширина фото */
+    z-index: 2;    /* чтобы быть поверх зелёной линии */
+}
+.fotoArt{
+    position:absolute;
+    width: 450px;
+}
+
+.greenLine {
+    margin-top: 10%;
+    position:relative;
+    width: 100%;
+    height: 530px;
+    background-color: rgba(11,50,43,1);
+}
+.contendText{
+    font-size: 30px;
+    margin-top: 10%;
+    margin-left: 45%;
+    position: relative;
+    background: none;
+    z-index: 3;
+    color: rgba(190,109,84,1);
+    font-family: Georgia;
+}
+h1{
+    background:none ;
+    position: absolute;
+    font-family: Georgia;
+}
+
+h2{
+    margin-top: 7%;
+    background:none ;
+    position: absolute;
+    font-family: Georgia;
+}
+
+p{
+    margin: 10px;
+    background:none ;
+    position: relative;
+    font-family: Georgia;
+}
+.textAbout{
+    margin-right: 20%;
+    margin-top: 20%;
+    margin-left: 7%;
+    background:none ;
+    position: absolute;
+    color: azure;
+    font-family: Georgia;
+    font-size: 20px;
+
+}

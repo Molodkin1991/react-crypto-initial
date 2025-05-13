@@ -1,0 +1,79 @@
+.headerText{
+    position: relative;
+    font-size: 10px;
+    z-index: 3;
+    color: rgba(190,109,84,1);
+    font-family: 'Georgia';
+}
+.infoText{
+    background: none;
+    margin-top: 4%;
+    position: absolute;
+    z-index: 3;
+    color: rgba(190,109,84,1);
+    font-family: 'Georgia';
+}
+.log{
+    color: rgba(190,109,84,1);
+    padding-right: 30px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.headerStyle {
+    text-align: end;
+    color: black;
+    height: 200px;
+    padding-inline: 60px;
+    padding-top:30px;
+    line-height: 64px;
+    background-color: rgba(233,230,223,1);
+
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: rgba(233,230,223,1);
+}
+.title{
+    font-size: 1.5rem;
+    color: #6d6a75;
+}
+.buttonGroup{
+    display: flex;
+    gap: 1rem;
+}
+.button {
+    background: none;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    color: rgba(11,50,43,1);
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: 'Georgia';
+}
+
+.headerLineStyle {
+    background-color:rgba(11,50,43,1);
+    height: 1px;
+    width: 100%;
+}
+.login {
+    border:2px solid rgba(190,109,84,1);
+    border-radius: 50%;
+    font-size: 25px;
+    padding: 5px;
+    color: rgba(190,109,84,1);
+}
+p{
+    font-size: 30px;
+    color:rgba(190,109,84,1);
+    margin: 20px;
+    background:none ;
+    position: relative;
+    font-family: Georgia;
+}
