@@ -23,11 +23,28 @@ export default function AppHeader ({active,onChange}){
 
     const [passwordMismatch, setPasswordMismatch] = useState(false);
 
+
     const openLogin = () => {
         setIsLogin(true);
         setIsOpen(true);
-        resetRegistrationForm();
+        resetForms();
     };
+
+    const resetForms = () => {
+        setLoginData({ username: "", password: "" });
+        setRegData({
+            username: "",
+            password: "",
+            confirmPassword: "",
+            email: "",
+        });
+        setPasswordMismatch(false);
+    };
+
+    const [loginData, setLoginData] = useState({
+        username: "",
+        password: "",
+    });
 
     const resetRegistrationForm = () => {
         setRegData({
@@ -63,6 +80,21 @@ export default function AppHeader ({active,onChange}){
         setIsOpen(false);
         resetRegistrationForm();
     };
+    const handleLoginChange = (e) => {
+        const { name, value } = e.target;
+        setLoginData((prev) => ({
+            ...prev,
+            [name]: value,
+        }));
+    };
+    const handleLoginSubmit = (e) => {
+        e.preventDefault();
+        console.log("🔑 Login данные:");
+        console.log("Username:", loginData.username);
+        console.log("Password:", loginData.password);
+        setIsOpen(false);
+        resetForms();
+    };
 
     return(
 
@@ -85,14 +117,26 @@ export default function AppHeader ({active,onChange}){
                 <>
                 <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
                     {isLogin ? (
-                    <form className="login" onSubmit={(e) => e.preventDefault()}>
+                    <form className="login" onSubmit={handleLoginSubmit}>
                     <p>Login</p>
                     <label>Username:</label>
-                    <input type= "text" name="username" required /><br/>
+                        <input
+                            type="text"
+                            name="username"
+                            value={loginData.username}
+                            onChange={handleLoginChange}
+                            required
+                        /><br/>
                     <label>Password:</label>
-                    <input type="password" name="password"/><br/>
+                        <input
+                            type="password"
+                            name="password"
+                            value={loginData.password}
+                            onChange={handleLoginChange}
+                            required
+                        /><br/>
                     <button type="submit"> Login</button><br/>
-                    <button type="button" onClick={() => { setIsLogin(false); resetRegistrationForm(); }}> = Registration =</button><br/>
+                        <button type="button" onClick={() => { setIsLogin(false); resetForms(); }}> = Registration =</button><br/>
                     </form >
                     ) : (
                     <form className="registration" onSubmit={handleRegisterSubmit}>
