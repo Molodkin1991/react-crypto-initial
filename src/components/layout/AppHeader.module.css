@@ -77,3 +77,7 @@ p{
     position: relative;
     font-family: Georgia;
 }
+.active {
+    background:none;
+    color: rgba(190,109,84,1);
+}

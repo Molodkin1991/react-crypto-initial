@@ -89,9 +89,13 @@ export default function AppHeader ({active,onChange}){
     };
     const handleLoginSubmit = (e) => {
         e.preventDefault();
-        console.log("🔑 Login данные:");
-        console.log("Username:", loginData.username);
-        console.log("Password:", loginData.password);
+        const loginPayload = {
+            username: loginData.username,
+            password: loginData.password,
+        };
+
+        console.log("🔑 Login данные:", loginPayload);
+
         setIsOpen(false);
         resetForms();
     };
@@ -106,10 +110,15 @@ export default function AppHeader ({active,onChange}){
             <h4 className={classes.infoText}>
                 Full-stack developer
             </h4>
-                    <button className={classes.button} isActiv={active==='main'} onClick={()=>onChange('main')}>Main</button>
-                    <button className={classes.button}  isActiv={active==='experience'} onClick={()=>onChange('experience')} >Experience</button>
-                    <button className={classes.button}  isActiv={active==='projects'} onClick={()=>onChange('projects')}>Projects</button>
-                    <button className={classes.button}  isActiv={active==='contact'} onClick={()=>onChange('contact')}>Contact</button>
+                    <button className={`${classes.button} ${active === 'main' ? classes.active : ''}`}
+                            onClick={() => onChange('main')}>Main</button>
+                    <button   className={`${classes.button} ${active === 'experience' ? classes.active : ''}`}
+                              onClick={() => onChange('experience')} >Experience</button>
+                    <button className={`${classes.button} ${active === 'projects' ? classes.active : ''}`}
+                            onClick={() => onChange('projects')}>Projects</button>
+                    <button className={`${classes.button} ${active === 'contact' ? classes.active : ''}`}
+                            onClick={() => onChange('contact')}
+                    >Contact</button>
             <div className={classes.headerLineStyle} ></div>
             <button onClick={() => setIsOpen(true)} className={classes.log}> Log In <UserOutlined className={classes.login} /> </button>
 
