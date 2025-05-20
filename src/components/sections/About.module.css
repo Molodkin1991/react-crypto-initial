@@ -1,0 +1,40 @@
+.greenLine {
+    text-align: center;
+    position:absolute;
+    padding-top: 6%;
+    width: 100%;
+    height: 200px;
+    background-color: rgba(11,50,43,1);
+}
+.titleH2{
+    margin-left: 10%;
+    position: absolute;
+    color:rgba(190,109,84,1);
+    text-align: center;
+    font-size: 50px;
+
+}
+img{
+    position: absolute;
+    margin-left: 10%;
+    height: 600px;
+    width: 500px;
+}
+p{
+    margin: 10px;
+    background:none ;
+    position: relative;
+    font-family: Georgia;
+}
+.textAbout{
+    text-align: left;
+    margin-right: 20%;
+    margin-top: 12%;
+    margin-left: 7%;
+    background:none ;
+    position: absolute;
+    font-family: Georgia;
+    font-size: 20px;
+    padding-right: 20%;
+
+}

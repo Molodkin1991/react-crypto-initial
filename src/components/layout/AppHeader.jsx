@@ -76,7 +76,7 @@ export default function AppHeader ({active,onChange}){
             return;
         }
 
-        console.log("✅ Успешная регистрация:", regData);
+        console.log("Успешная регистрация:", regData);
         setIsOpen(false);
         resetRegistrationForm();
     };
@@ -94,7 +94,7 @@ export default function AppHeader ({active,onChange}){
             password: loginData.password,
         };
 
-        console.log("🔑 Login данные:", loginPayload);
+        console.log("Login данные:", loginPayload);
 
         setIsOpen(false);
         resetForms();
@@ -113,12 +113,12 @@ export default function AppHeader ({active,onChange}){
                     <button className={`${classes.button} ${active === 'main' ? classes.active : ''}`}
                             onClick={() => onChange('main')}>Main</button>
                     <button   className={`${classes.button} ${active === 'experience' ? classes.active : ''}`}
-                              onClick={() => onChange('experience')} >Experience</button>
+                              onClick={() => onChange('experience')} >About</button>
                     <button className={`${classes.button} ${active === 'projects' ? classes.active : ''}`}
                             onClick={() => onChange('projects')}>Projects</button>
                     <button className={`${classes.button} ${active === 'contact' ? classes.active : ''}`}
                             onClick={() => onChange('contact')}
-                    >Contact</button>
+                    >Blog</button>
             <div className={classes.headerLineStyle} ></div>
             <button onClick={() => setIsOpen(true)} className={classes.log}> Log In <UserOutlined className={classes.login} /> </button>
 
@@ -174,7 +174,7 @@ export default function AppHeader ({active,onChange}){
                             onChange={handleRegisterChange}
                             required
                             style={{
-                                border: passwordMismatch ? "2px solid red" : "1px solid #ccc",
+                                border: passwordMismatch ? "2px solid red" : "1px solid rgba(11,50,43,1)",
                             }}
                     /><br/>
                     <label>- Email - :</label>
